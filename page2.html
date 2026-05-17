@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Page 2</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style2.css">
+
+</head>
+
+<body>
+
+<div class="page2">
+
+<!-- ✨ BURBUJAS -->
+
+<div class="bubbles">
+
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+</div>
+
+<!-- ✨ SPARKLES -->
+
+<div class="sparkles">
+
+<div
+class="sparkle"
+style="top:6%; left:8%;">
+</div>
+
+<div
+class="sparkle"
+style="top:14%; left:42%;">
+</div>
+
+<div
+class="sparkle"
+style="top:10%; left:82%;">
+</div>
+
+<div
+class="sparkle"
+style="top:24%; left:18%;">
+</div>
+
+<div
+class="sparkle"
+style="top:32%; left:68%;">
+</div>
+
+<div
+class="sparkle"
+style="top:40%; left:88%;">
+</div>
+
+</div>
+
+<!-- ✨ TÍTULO -->
+
+<div class="title-container">
+
+<span class="title-text">
+TE
+</span>
+
+<div class="heart-wrapper">
+
+<div class="heart-glow"></div>
+
+<img
+src="heart.png"
+class="heart-img">
+
+</div>
+
+<span class="title-text">
+INFINITAMENTE
+</span>
+
+</div>
+
+<p class="subtitle">
+Cada burbuja me recuerda lo afortunados que somos de tenerte
+</p>
+
+<div class="sixpack-section">
+
+<img
+src="sixpack.png"
+class="sixpack-img">
+
+<button class="cap-hitbox cap1"
+onclick="openBottle(1)">
+</button>
+
+<button class="cap-hitbox cap2"
+onclick="openBottle(2)">
+</button>
+
+<button class="cap-hitbox cap3"
+onclick="openBottle(3)">
+</button>
+
+<button class="cap-hitbox cap4"
+onclick="openBottle(4)">
+</button>
+
+<button class="cap-hitbox cap5"
+onclick="openBottle(5)">
+</button>
+
+<button class="cap-hitbox cap6"
+onclick="openBottle(6)">
+</button>
+
+</div>
+
+<p class="sixpack-legend">
+Elige tu Coca-Cola favorita en cualquier momento
+</p>
+
+<p class="sixpack-message">
+Cada Coca-Cola guarda un detallito especial para ti
+</p>
+
+<div class="can-section">
+
+<img
+src="coke-can.png"
+class="can-img"
+onclick="openMachine()">
+
+</div>
+
+<p class="final-message">
+Porque una Coca-Cola nunca es suficiente,
+al igual que tu cariño
+</p>
+
+</div>
+<!-- ✨ MODAL COCA-COLA -->
+
+<div class="bottle-modal" id="bottleModal">
+
+  <div class="modal-overlay"></div>
+
+  <div class="modal-content">
+
+    <button
+      class="close-modal-btn"
+      onclick="closeBottleModal()">
+
+      ✕
+
+    </button>
+
+    <div class="bottle-row">
+
+      <img
+        src="bottle.png"
+        class="big-bottle"
+        id="mainBottle">
+
+      <img
+        src="opener.png"
+        class="opener-img"
+        id="opener"
+        onclick="openCoke()">
+
+      <div class="fizz" id="fizz"></div>
+
+    </div>
+
+    <p class="open-text" id="openText">
+
+      Destapa tu Coca-Cola
+
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ✨ OVERLAY CUPÓN -->
+
+<div class="coupon-choice" id="couponChoice">
+
+  <div class="coupon-choice-inner">
+
+    <img
+      src="coupon1.png"
+      class="coupon-image"
+      id="couponImage"
+    >
+
+    <button
+      class="coupon-zone cancel-zone"
+      onclick="cancelCoupon()">
+    </button>
+
+    <button
+      class="coupon-zone redeem-zone"
+      onclick="confirmRedeem()">
+    </button>
+
+    <div class="coupon-labels">
+
+      <p class="coupon-label">
+        Cancelar
+      </p>
+
+      <p class="coupon-label">
+        Redimir
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<!-- ✨ MODAL MÁQUINA -->
+
+<div class="machine-modal" id="machineModal">
+
+  <div class="machine-overlay"></div>
+
+  <div class="machine-content">
+
+    <button
+      class="close-machine-btn"
+      onclick="closeMachine()">
+
+      ✕
+
+    </button>
+
+<div class="machine-wrapper">
+
+<div id="machineImageContainer">
+
+<img
+src="machine-5.png"
+class="machine-img"
+id="machineImage">
+
+</div>
+
+<button
+class="machine-btn machine-btn-1"
+onclick="useMachineCan(1)">
+</button>
+
+<button
+class="machine-btn machine-btn-2"
+onclick="useMachineCan(2)">
+</button>
+
+<button
+class="machine-btn machine-btn-3"
+onclick="useMachineCan(3)">
+</button>
+
+<button
+class="machine-btn machine-btn-4"
+onclick="useMachineCan(4)">
+</button>
+
+<button
+class="machine-btn machine-btn-5"
+onclick="useMachineCan(5)">
+</button>
+
+</div>
+
+    <p class="machine-text">
+
+      Toma tu Coca-Cola en el orden:
+      arriba hacia abajo
+
+</p>
+
+<!-- ✨ ELECCIÓN LATA -->
+
+<div
+class="machine-choice"
+id="machineChoice">
+
+<div class="machine-choice-inner">
+
+<p class="machine-choice-title">
+Una Coca-Cola de regalo para ti
+</p>
+
+<img
+src="can-crushed.png"
+class="machine-can-left"
+onclick="cancelMachineCan()">
+
+<img
+src="can-normal.png"
+class="machine-can-right"
+onclick="redeemMachineCan()">
+
+<div class="machine-choice-labels">
+
+<p>
+Cancelar
+</p>
+
+<p>
+Redimir
+</p>
+
+</div>
+
+<p
+class="machine-counter"
+id="machineCounter">
+
+Redimidos 0/5
+
+</p>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="script2.js"></script>
+
+</body>
+</html>
